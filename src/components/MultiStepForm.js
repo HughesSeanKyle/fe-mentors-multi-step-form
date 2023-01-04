@@ -5,22 +5,18 @@ const MultiStepForm = () => {
 	const [step, setStep] = useState(1);
 	const [animation, setAnimation] = useState('');
 
-	useEffect(() => {
-		setAnimation('animate__animated animate__bounceIn');
-	}, [step]);
-
 	const handleNext = () => {
+		setStep(step + 1);
 		setAnimation('animate__animated animate__backInRight');
-		setTimeout(() => setStep(step + 1), 500);
 	};
 
 	const handleBack = () => {
+		setStep(step - 1);
 		setAnimation('animate__animated animate__backInLeft');
-		setTimeout(() => setStep(step - 1), 500);
 	};
 
 	return (
-		<div className={`step step-${step} ${animation}`}>
+		<div className={`${animation}`}>
 			{step === 1 && (
 				<div style={{ background: 'red' }}>
 					<label htmlFor="email">Email:</label>
