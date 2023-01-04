@@ -23,3 +23,7 @@
 	--neutral-white: hsl(0, 0%, 100%);
 	--paragraph-font-size: 16px;
 }
+
+#root {
+	height: 100vh;
+}
