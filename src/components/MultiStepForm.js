@@ -6,16 +6,16 @@ const MultiStepForm = () => {
 	const [animation, setAnimation] = useState('');
 
 	useEffect(() => {
-		setAnimation('animated fadeIn');
+		setAnimation('animate__animated animate__bounceIn');
 	}, [step]);
 
 	const handleNext = () => {
-		setAnimation('animated fadeOut');
+		setAnimation('animate__animated animate__backInRight');
 		setTimeout(() => setStep(step + 1), 500);
 	};
 
 	const handleBack = () => {
-		setAnimation('animated fadeOut');
+		setAnimation('animate__animated animate__backInLeft');
 		setTimeout(() => setStep(step - 1), 500);
 	};
 
